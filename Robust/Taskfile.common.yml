@@ -1,0 +1,11 @@
+
+version: '3'
+
+
+tasks:
+  greet:
+    desc: "Greet the world"
+    vars:
+      GREETING: "Hello, World!"
+    cmds:
+      - echo "{{.GREETING}}"

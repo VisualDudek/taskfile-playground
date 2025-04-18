@@ -1,0 +1,20 @@
+version: '3'
+
+tasks:
+  run:
+    desc: Run the app
+    cmds:
+      - go run ./go-tcp-echo/main.go
+
+  r:
+    desc: Task Aliases for run task
+    cmds: [task run]
+    silent: true
+
+  lint:
+    desc: Run the linter
+    cmds:
+      - golangci-lint run ./...
+    silent: false
+    env:
+      GOLANGCI_LINT_CONFIG: .golangci.yml
